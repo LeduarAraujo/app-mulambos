@@ -1,7 +1,20 @@
-<!-- Image and text -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-      <img src="assets/img/logo.jpeg" width="40" height="40" class="d-inline-block align-top" alt="">
-      Mulambos Airsoft Team
-    </a>
-  </nav>
+  <a class=" navbar-brand" [routerLink]="'/menu'">
+    <img class="logo-menu" src="assets/img/logo.jpeg" width="40" height="40" class="d-inline-block align-top" alt="">
+    Mulambos Airsoft Team
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/menu'">Início <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/menu'">Quem Somos</a>
+      </li>
+    </ul>
+  </div>
+</nav>
