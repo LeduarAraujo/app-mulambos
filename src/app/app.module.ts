@@ -8,6 +8,14 @@ import { MenuRodapeComponent } from './components/menu-rodape/menu-rodape.compon
 import { ControleJogosComponent } from './components/controle-jogos/controle-jogos.component';
 import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inicial.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +26,18 @@ import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inici
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
+    // Firebase
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

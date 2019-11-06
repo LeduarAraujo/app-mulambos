@@ -14,7 +14,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let opr of listOpr">
+            <tr *ngFor="let opr of listOpr | async">
                 <td class="align-middle">{{ opr.nmOpr }}</td>
                 <td class="align-middle">{{opr.aplOpr}}</td>
                 <td class="align-middle">{{opr.clOpr}}</td>

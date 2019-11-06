@@ -1,0 +1,21 @@
+[debug] [2019-11-06T03:59:21.030Z] ----------------------------------------------------------------------
+[debug] [2019-11-06T03:59:21.032Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ledua\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2019-11-06T03:59:21.032Z] CLI Version:   7.6.2
+[debug] [2019-11-06T03:59:21.032Z] Platform:      win32
+[debug] [2019-11-06T03:59:21.032Z] Node Version:  v12.7.0
+[debug] [2019-11-06T03:59:21.032Z] Time:          Wed Nov 06 2019 01:59:21 GMT-0200 (GMT-02:00)
+[debug] [2019-11-06T03:59:21.032Z] ----------------------------------------------------------------------
+[debug] [2019-11-06T03:59:21.032Z] 
+[debug] [2019-11-06T03:59:21.038Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-06T03:59:21.039Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\zMarshalls\ws_web\app-mulambos
+
