@@ -118,8 +118,17 @@
               "devServerTarget": "app-mulambos:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://leduararaujo.github.io/app-mulambos",
+            "name": "leduararaujo",
+            "email": "leduar.araujo@hotmail.com"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "app-mulambos"
 }
