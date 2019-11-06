@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { MenuRodapeComponent } from './components/menu-rodape/menu-rodape.component';
+import { ControleJogosComponent } from './components/controle-jogos/controle-jogos.component';
+import { PaginaInicialComponent } from './components/pagina-inicial/pagina-inicial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuBarComponent,
-    MenuRodapeComponent
+    MenuRodapeComponent,
+    ControleJogosComponent,
+    PaginaInicialComponent
   ],
   imports: [
     BrowserModule,
