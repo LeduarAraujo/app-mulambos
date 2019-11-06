@@ -1,7 +1,7 @@
 <div class="container">
     <h2>MAT</h2>
     <h6>Mulambos Airsoft Team</h6>
-    <table class="table table-sm table-striped table-borderless">
+    <table class="table table-sm table-striped table-borderless" id="tabelaOperador">
         <caption>Tabela do jogo do dia 10/11/2019</caption>
         <thead class="thead-dark">
             <tr>
@@ -57,4 +57,7 @@
             </tr>
         </tbody>
     </table>
+    <div>
+        <button class="btn btn-primary" type="button" (click)="criarPDF()">Imprimir</button>
+    </div>
 </div>

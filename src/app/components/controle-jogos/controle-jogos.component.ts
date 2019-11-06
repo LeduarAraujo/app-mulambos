@@ -58,4 +58,19 @@ export class ControleJogosComponent implements OnInit {
     this.operadorService.incluirOperador(this.operador);
 
   }
+
+  criarPDF() {
+    let tabela = document.getElementById("tabelaOperador").innerHTML;
+
+    let win = window.open("","","height=700,width=700");
+    win.document.write("<html><head>");
+    win.document.write("<title>Lista jogo dia 10/11/2019</title>");
+    win.document.write("</head><body>");
+    win.document.write(tabela);
+    win.document.write("</body></html>");
+    win.document.close();
+
+    win.print();
+  }
+
 }
