@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "ngh": "ngh --dir=dist/app-mulambos",
     "deploy": "ng deploy --repo=https://github.com/LeduarAraujo/app-mulambos.git --name='leduararaujo' --email=leduar.araujo@hotmail.com",
-    "deploy2": "ng deploy --base-href='/app-mulambos/'"
+    "deploy2": "ng deploy --base-href=/app-mulambos/"
   },
   "private": true,
   "homepage": "https://leduararaujo.github.io/app-mulambos/",
