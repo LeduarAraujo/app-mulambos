@@ -14,44 +14,37 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="nmOpr">Nome do Operador</label>
-                            <input [(ngModel)]="operador.nmOpr" type="text" class="form-control" 
-                                name="nmOpr" id="nmOpr" placeholder="Marcos Freire" required="" aria-required="true">
+                            <input [(ngModel)]="operador.nmOpr" type="text" class="form-control" name="nmOpr" id="nmOpr"
+                                placeholder="Marcos Freire" required="" aria-required="true">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="aplOpr">Apelido Operador</label>
-                            <input type="text" [(ngModel)]="operador.aplOpr" class="form-control" 
-                                name="aplOpr" id="aplOpr" placeholder="Docinho" required="" aria-required="true">
+                            <input type="text" [(ngModel)]="operador.aplOpr" class="form-control" name="aplOpr"
+                                id="aplOpr" placeholder="Docinho" required="" aria-required="true">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="nmTime">Nome do Time</label>
-                            <input type="text" [(ngModel)]="operador.nmTime" class="form-control" 
-                                name="nmTime" id="nmTime" placeholder="Mulambos MAT" required="" aria-required="true">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="clOpr">Classe</label>
-                            <select [(ngModel)]="operador.clOpr" id="clOpr" name="clOpr" class="form-control"
-                                required="" aria-required="true">
-                                <option selected>Selecione</option>
-                                <option>Assault</option>
-                                <option>Suporte</option>
-                                <option>DMR</option>
-                                <option>Sniper</option>
-                            </select>
-                        </div>
+                        <label for="clOpr">Classe</label>
+                        <select [(ngModel)]="operador.clOpr" id="clOpr" name="clOpr" class="form-control" required=""
+                            aria-required="true">
+                            <option selected>Selecione</option>
+                            <option>Assault</option>
+                            <option>Suporte</option>
+                            <option>DMR</option>
+                            <option>Sniper</option>
+                        </select>
                     </div>
                     <h6 class="modal-title" id="gunPrimaria">Arma Primária</h6>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="fpsFirstGun">FPS</label>
-                            <input type="number" [(ngModel)]="operador.fpsFirstGun" class="form-control" 
+                            <input type="number" [(ngModel)]="operador.fpsFirstGun" class="form-control"
                                 name="fpsFirstGun" id="fpsFirstGun" required="" aria-required="true">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="nfArmaPrimaria">Nota Fiscal</label>
-                            <select [(ngModel)]="operador.ntFirstGun" id="ntFirstGun" name="ntFirstGun" 
-                                required="" aria-required="true"class="form-control">
+                            <select [(ngModel)]="operador.ntFirstGun" id="ntFirstGun" name="ntFirstGun" required=""
+                                aria-required="true" class="form-control">
                                 <option selected>NOK</option>
                                 <option>OK</option>
                             </select>
@@ -61,13 +54,13 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="fpsSecondGun">FPS</label>
-                            <input type="number" [(ngModel)]="operador.fpsSecondGun" class="form-control" 
+                            <input type="number" [(ngModel)]="operador.fpsSecondGun" class="form-control"
                                 id="fpsSecondGun" name="fpsSecondGun" required="" aria-required="true">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="nfArmaSecundaria">Nota Fiscal</label>
-                            <select [(ngModel)]="operador.ntSecondGun" id="ntSecondGun" name="ntSecondGun" 
-                                required="" aria-required="true" class="form-control">
+                            <select [(ngModel)]="operador.ntSecondGun" id="ntSecondGun" name="ntSecondGun" required=""
+                                aria-required="true" class="form-control">
                                 <option selected>NOK</option>
                                 <option>OK</option>
                             </select>

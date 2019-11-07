@@ -8,5 +8,4 @@ export class Operador {
     public ntSecondGun: string;
     public fpsSecondGun: string;
     public siOpr: boolean;
-    public nmTime: string;
 }
