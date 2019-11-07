@@ -1,0 +1,84 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <form #formCadastro="ngForm" (ngSubmit)="cadastroOperador(formCadastro)">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Cadastro de Operador</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nmOpr">Nome do Operador</label>
+                            <input [(ngModel)]="operador.nmOpr" type="text" class="form-control" 
+                                name="nmOpr" id="nmOpr" placeholder="Marcos Freire" required="" aria-required="true">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="aplOpr">Apelido Operador</label>
+                            <input type="text" [(ngModel)]="operador.aplOpr" class="form-control" 
+                                name="aplOpr" id="aplOpr" placeholder="Docinho" required="" aria-required="true">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nmTime">Nome do Time</label>
+                            <input type="text" [(ngModel)]="operador.nmTime" class="form-control" 
+                                name="nmTime" id="nmTime" placeholder="Mulambos MAT" required="" aria-required="true">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="clOpr">Classe</label>
+                            <select [(ngModel)]="operador.clOpr" id="clOpr" name="clOpr" class="form-control"
+                                required="" aria-required="true">
+                                <option selected>Selecione</option>
+                                <option>Assault</option>
+                                <option>Suporte</option>
+                                <option>DMR</option>
+                                <option>Sniper</option>
+                            </select>
+                        </div>
+                    </div>
+                    <h6 class="modal-title" id="gunPrimaria">Arma Primária</h6>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="fpsFirstGun">FPS</label>
+                            <input type="text" [(ngModel)]="operador.fpsFirstGun" class="form-control" 
+                                name="fpsFirstGun" id="fpsFirstGun" required="" aria-required="true">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="nfArmaPrimaria">Nota Fiscal</label>
+                            <select [(ngModel)]="operador.ntFirstGun" id="ntFirstGun" name="ntFirstGun" 
+                                required="" aria-required="true"class="form-control">
+                                <option selected>NOK</option>
+                                <option>OK</option>
+                            </select>
+                        </div>
+                    </div>
+                    <h6 class="modal-title" id="gunSecundaria">Arma Secundária</h6>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="fpsSecondGun">FPS</label>
+                            <input type="text" [(ngModel)]="operador.fpsSecondGun" class="form-control" 
+                                id="fpsSecondGun" name="fpsSecondGun" required="" aria-required="true">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="nfArmaSecundaria">Nota Fiscal</label>
+                            <select [(ngModel)]="operador.ntSecondGun" id="ntSecondGun" name="ntSecondGun" 
+                                required="" aria-required="true" class="form-control">
+                                <option selected>NOK</option>
+                                <option>OK</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

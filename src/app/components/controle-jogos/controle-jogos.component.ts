@@ -20,7 +20,7 @@ export class ControleJogosComponent implements OnInit {
 
   constructor(private operadorService: OperadorService) {
     this.operador = new Operador();
-   }
+  }
 
   ngOnInit() {
 
