@@ -1,32 +1,50 @@
-import { Injectable } from "@angular/core";
-import { AngularFireDatabase, AngularFireList } from "@angular/fire/database";
+import {Injectable} from '@angular/core';
+import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
+import {map} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 export class GenericService {
-    genRef: AngularFireList<any>;
+  dadosEntidadeGenerica: AngularFireList<any>;
 
-    constructor(private db: AngularFireDatabase) {
-    }
+  constructor(private db: AngularFireDatabase) {
+  }
 
-    setEntity(entity: string) {
-        this.genRef = this.db.list(entity);
-    }
+  setEntity(entity: string) {
+    this.dadosEntidadeGenerica = this.db.list(entity);
+  }
 
-    register(any: any) {
-        return this.genRef.push(any);
-    }
+  getAll(): Observable<any> {
+    return this.dadosEntidadeGenerica.snapshotChanges()
+      .pipe(
+        map(changes => {
+          return changes.map(opr => ({
+            key: opr.payload.key,
+            ...opr.payload.val()
+          }));
+        })
+      );
+  }
 
-    delete() {
-        this.genRef.remove();
-    }
+  register(objeto: any) {
+    return this.dadosEntidadeGenerica.push(objeto);
+  }
 
-    update(any: any) {
-        this.genRef.update(any, any);
-    }
+  delete(id: any) {
+    this.dadosEntidadeGenerica.remove(id);
+  }
 
-    search(any: any) {
-        return this.genRef;
-    }
+  update(id: any, objeto?: any) {
+    this.dadosEntidadeGenerica.update(id, objeto);
+  }
+
+  search(id: any): Observable<any> {
+    return this.dadosEntidadeGenerica.valueChanges(id);
+  }
+
+  querySearch(sql: any) {
+    return this.dadosEntidadeGenerica;
+  }
 }

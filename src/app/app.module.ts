@@ -17,6 +17,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { environment } from '../environments/environment';
 import { CadastroOperadorComponent } from './components/cadastro-operador/cadastro-operador.component';
+import { OperacoesComponent } from './components/operacoes/operacoes.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CadastroOperadorComponent } from './components/cadastro-operador/cadast
     MenuRodapeComponent,
     ControleJogosComponent,
     PaginaInicialComponent,
-    CadastroOperadorComponent
+    CadastroOperadorComponent,
+    OperacoesComponent
   ],
   imports: [
     BrowserModule,
