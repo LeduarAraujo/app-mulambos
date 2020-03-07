@@ -1,8 +1,6 @@
 import {Injectable} from '@angular/core';
 import {AngularFireDatabase} from '@angular/fire/database';
 import {User} from '../models/user';
-import {error} from 'util';
-import {catchError} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +8,15 @@ import {catchError} from 'rxjs/operators';
 export class SessaoService {
 
   auth: any;
+  isLogado: boolean;
 
   constructor(private db: AngularFireDatabase) {
     this.auth = this.db.database.app.auth();
+    this.auth.onAuthStateChanged( user => {
+      if (user) {
+        this.isLogado = true;
+      }
+    });
   }
 
   login(user: User) {
@@ -22,19 +26,12 @@ export class SessaoService {
   }
 
   logOut() {
-    this.auth.signOut();
-  }
-
-  isUsuarioLogado() {
-
-    return this.auth.onAuthStateChanged(user => {
-      if (user) {
-        return true;
-      } else {
-        return false;
-      }
+    this.auth.signOut().complete(retorno => {
+      this.isLogado = false;
     });
   }
 
-
+  isUsuarioLogado(): boolean {
+    return this.isLogado;
+  }
 }

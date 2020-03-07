@@ -3,6 +3,7 @@ import {Operacao} from '../../models/operacao';
 import {Observable} from 'rxjs';
 import {OperacaoService} from '../../services/operacao.service';
 import {SessaoService} from '../../services/sessao.service';
+import {debug} from 'util';
 
 declare var $: any;
 declare var require: any;
@@ -15,17 +16,12 @@ declare var require: any;
 export class MenuBarComponent implements OnInit {
 
   arrOperacoes: Observable<Operacao>;
-  operacao: any;
-  isUsuarioLogado: boolean = false;
 
   constructor(private operacaoService: OperacaoService,
               private sessao: SessaoService) { }
 
   ngOnInit() {
-    debugger;
     this.arrOperacoes = this.operacaoService.getOperacaoLista();
-    this.isUsuarioLogado = this.sessao.isUsuarioLogado();
-    debugger;
   }
 
   getNmOperacao(operacao: Operacao) {
@@ -34,7 +30,7 @@ export class MenuBarComponent implements OnInit {
   }
 
   isUserLogado() {
-    return this.isUsuarioLogado;
+    return this.sessao.isUsuarioLogado();
   }
 
   deslogar() {
