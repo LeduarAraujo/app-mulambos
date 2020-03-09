@@ -18,12 +18,12 @@
 
 .brand_logo_container {
   position: absolute;
-  height: 170px;
-  width: 170px;
+  height: 160px;
+  width: 160px;
   top: -60px;
   border-radius: 50%;
   background: #3d7102;
-  padding: 10px;
+  padding: 4.5px;
   text-align: center;
 }
 
@@ -70,6 +70,14 @@
   background-color: #c0392b !important;
 }
 
-.element-container {
-  margin-top: 20%;
+@media (min-width: 992px){
+  .element-container {
+    margin-top: 25vh;
+  }
+}
+
+@media (max-width: 991px){
+  .element-container {
+    margin-top: 15vh;
+  }
 }

@@ -1,24 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-image: url("./assets/img/logo-center.svg");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-attachment: fixed;
+  background-position: center;
+}
 
 @media (min-width: 992px){
   body {
-    height: 100vh;
-    background-image: url("./assets/img/logo.jpeg");
-    background-repeat: no-repeat;
-    background-color: #4f4f50;
-    background-attachment: fixed;
-    background-position: center;
+    background-size: 150vh;
   }
 }
 
 @media (max-width: 991px){
   body {
-    height: 100vh;
-    background-image: url("./assets/img/logo.jpeg");
-    background-repeat: no-repeat;
-    background-size: 134%;
-    background-color: #4f4f50;
-    background-attachment: fixed;
-    background-position: center;
+    background-size: 110vh;
   }
 }

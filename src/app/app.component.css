@@ -1,3 +1,18 @@
+.nav-menu {
+  width: 100%;
+  margin-top: 0;
+}
+@media (min-width: 992px) {
+  .corpo{
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 991px){
+  .corpo{
+    margin-bottom: 15%;
+  }
+}
 .rodape {
   position: fixed;
   display: flex;
