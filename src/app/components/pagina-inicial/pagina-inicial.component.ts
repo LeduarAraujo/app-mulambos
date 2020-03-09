@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Noticia} from '../../models/noticia';
 
 @Component({
   selector: 'app-pagina-inicial',
