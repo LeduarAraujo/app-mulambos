@@ -26,3 +26,7 @@
   -webkit-text-stroke-color: black;
   font-size: 60px;
 }
+
+.tamanho-card {
+  width: 18rem;
+}
